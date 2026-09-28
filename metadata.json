@@ -1,0 +1,6 @@
+{
+  "name": "兩岸民生智庫觀測站",
+  "description": "客觀權威的兩岸民生經濟數據比較平台，提供每日動態新聞、購買力平價(PPP)、薪資住宅醫療量化圖表、Gemini AI深度觀點解析、多語系支援與語音朗讀。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

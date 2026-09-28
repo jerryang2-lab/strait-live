@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, :where(.dark *)));
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Noto Serif TC', Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Print copyright watermarking */
+@media print {
+  body::before {
+    content: "兩岸民生觀測站 (Cross-Strait Livelihood Observatory) · 版權所有 © 2026 · 禁止未授權商業複印";
+    display: block;
+    text-align: center;
+    font-size: 10pt;
+    color: #888;
+    margin-bottom: 20px;
+  }
+}
+
